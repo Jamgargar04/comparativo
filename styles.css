@@ -1,0 +1,98 @@
+body {
+    font-family: "Krub", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #0c0e13;
+    overflow: hidden; /* Evita el scroll en el fondo */
+}
+
+#backgroundVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container {
+    background-color: rgba(57, 72, 103, 0.8); /* Hacer el contenedor semitransparente */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    z-index: 1; /* Asegura que el contenido esté sobre el video */
+}
+
+h1, h2 {
+    color: #F1F6F9;
+}
+
+.colorph3 {
+    color: #ffffff;
+}
+
+.colorp {
+    color: #F1F6F9;
+}
+
+.explanation {
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #0069aa;
+    border-radius: 10px;
+}
+
+input[type="text"] {
+    margin: 10px 0;
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    margin: 10px;
+    padding: 15px 30px; /* Aumenta el tamaño de los botones */
+    background-color: #ffb73b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem; /* Aumenta el tamaño de la fuente */
+    font-weight: bold ;
+    transition: background-color 0.3s;
+
+}
+
+button:hover {
+    background-color: #f58014;
+}
+
+#message {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#languageToggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #3498db;
+}
+
+#startScreen, #gameScreen {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+}

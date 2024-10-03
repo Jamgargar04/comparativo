@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Adjective Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Video de fondo -->
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="/img/INGLES.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+
+    <button id="languageToggle" onclick="toggleLanguage()">ES/EN</button>
+    <div class="container">
+        <div id="startScreen">
+            <h1 id="gameTitle">English Adjective Game</h1>
+            <div class="explanation">
+                <div class="colorph3">
+                    <h3 id="explanationTitle">Adjective Forms:</h3>
+                    <p id="positiveExplanation">• Positive: The base form of the adjective (e.g., "happy").</p>
+                    <p id="comparativeExplanation">• Comparative: Used to compare two things. Add "-er" or use "more" (e.g., "happier" or "more beautiful").</p>
+                    <p id="superlativeExplanation">• Superlative: Used to compare three or more things. Add "-est" or use "most" (e.g., "happiest" or "most beautiful").</p>
+                </div>
+            </div>
+            <button id="startButton" onclick="startGame()">Start Game</button>
+        </div>
+        <div id="gameScreen" class="hidden">
+            <h1 id="gameTitleInGame">English Adjective Game</h1>
+            <p div class="colorp"><span id="instructionText">Type the</span> <span id="form-type"></span> <span id="formOf">form of:</span></p>
+            <h2 id="adjective"></h2>
+            <input type="text" id="user-input" placeholder="Your answer">
+            <button onclick="checkAnswer()" id="submitButton">Submit</button>
+            <button onclick="nextAdjective()" id="nextButton">Next</button>
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
